@@ -25,9 +25,20 @@ Wise Budget is a web application designed to help users manage budgets and expen
 - **Toast Notifications:**
   - Informative toast notifications for success messages.
 
+##Technologies Used
+React
+React Router
+React Bootstrap
+react-toastify
+CSS Modules
+
+
 ## How to Run
 
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/Ibrahimali2020/wise-budget.git
+
+
+   
