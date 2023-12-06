@@ -33,6 +33,9 @@ Wise Budget is a web application designed to help users manage budgets and expen
 - CSS Modules
 
 
+## Live Site URL:
+- [Live site URL](https://wisebudget.netlify.app)
+
 ## How to Run
 
  Clone the repository:
