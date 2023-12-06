@@ -1,0 +1,28 @@
+.logo {
+  display: inline-block;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 8px;
+  border: 3px solid transparent; /* Reserve space for the border */
+  border-radius: 10px; /* Reserve space for the border-radius */
+  transition: border-color 0.5s ease; /* Add a transition for a smooth effect */
+}
+
+.logo:hover {
+  border-color: var(--primary-color); /* Change the border color on hover */
+}
+
+
+.logo .appName {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 5px;
+  color: black;
+}
+
+.logo .span {
+  color: var(--primary-color);
+}
+

@@ -1,0 +1,32 @@
+.card {
+  border: 3px solid var(--secondary-color);
+  border-radius: 10px;
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #5cb85c;
+  margin-right: 10px;
+  height: 100%;
+}
+
+.budgetInfo {
+  font-weight: 700 ;
+
+}
+
+.progress {
+  background-color: var(--neutral-color);
+}
+
+.spendRemaing {
+  font-size: 14px;
+}
+
+.remaining {
+  color: var(--neutral-color);
+}
+
+.link {
+  color: var(--background-color);
+  text-decoration: none;
+}

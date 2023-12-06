@@ -1,0 +1,30 @@
+ .btnDelete {
+  border: 5px transparent solid; /* Reserve space for the border */
+  outline: transparent 2px solid; /* Reserve space for the outline */
+  transition: border-color 0.3s ease, outline-color 0.3s ease; /* Add transitions for a smooth effect */
+}
+
+.btnDelete:hover {
+  border-color: var(--background-color); 
+  outline-color: #D4403A; /* Change the outline color on hover */
+}
+
+ .iconDelete {
+  margin-left: 10px;
+}
+
+.appnav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.welcomeName {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.welcomeName span {
+  color: var(--primary-color);
+}

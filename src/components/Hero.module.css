@@ -1,0 +1,53 @@
+.hero {
+  display: flex;
+  margin-top: 50px;
+}
+
+.leftSideContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+
+}
+.leftSideContent .h1 {
+  font-size: 55px;
+  font-weight: bolder;
+}
+
+.leftSideContent .h3 {
+  color: var(--text-color);
+}
+
+.leftSideContent .span {
+  color: var(--primary-color);
+}
+
+.leftSideContent .btnCreate {
+  margin-top: 10px;
+  border: 5px transparent solid; /* Reserve space for the border */
+  outline: transparent 2px solid; /* Reserve space for the outline */
+  transition: border-color 0.3s ease, outline-color 0.3s ease; /* Add transitions for a smooth effect */
+}
+
+.leftSideContent .btnCreate:hover {
+  border-color: var(--background-color); 
+  outline-color: #000; /* Change the outline color on hover */
+}
+
+ .iconCreate {
+  margin-left: 10px;
+}
+
+
+.hero .heroImg {
+  width: 700px;
+}
+
+.leftSideContent .nameInput {
+  width: 400px;
+  height: 50px;
+  border: 1px solid var(--neutral-color);
+}
+
