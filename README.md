@@ -30,4 +30,4 @@ Wise Budget is a web application designed to help users manage budgets and expen
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/wise-budget.git
+   git clone https://github.com/Ibrahimali2020/wise-budget.git
