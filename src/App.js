@@ -136,7 +136,7 @@ function App() {
               />} />
 
               {isLoged && (
-                <Route path="app" element={<HomePage
+                <Route path="/app" element={<HomePage
                   name={name}
                   setName={setName}
                   budgetName={budgetName}
