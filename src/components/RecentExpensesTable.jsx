@@ -2,13 +2,13 @@ import React from 'react';
 import Button from './Button';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useBudget } from '../contexts/BudgetContext';
 
-export default function RecentExpensesTable({
-  expenses,
-  budgets,
-  handleDeleteExpense }) {
+export default function RecentExpensesTable({ budgets, expenses }) {
+  const { handleDeleteExpense } = useBudget()
 
-
+  // const lastPathSegment = window.location.pathname.split('/').filter(segment => segment !== '').pop();
+  // console.log(lastPathSegment);
   return (
     <table className="table table-striped">
       <thead className="h5">
@@ -28,6 +28,7 @@ export default function RecentExpensesTable({
                 <th scope="row">{expense.expenseName}</th>
                 <td>${expense.expenseAmount}</td>
                 <td>
+
                   <Link to={`budget/${expense.selectbudgetCategory}`}>
                     <Button color="success" outlineColor='green'>
                       {budgets
@@ -37,6 +38,7 @@ export default function RecentExpensesTable({
                         ))}
                     </Button>
                   </Link>
+
                 </td>
                 <td>
                   <Button

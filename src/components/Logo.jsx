@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styles from './Logo.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useBudget } from '../contexts/BudgetContext';
 
 
-export default function Logo({ name, isLoged, setIsLoged }) {
+export default function Logo() {
   const navigate = useNavigate()
+  const { isLoged } = useBudget()
 
 
   return (

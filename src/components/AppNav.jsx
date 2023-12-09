@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { toast } from 'react-toastify'
+import { useBudget } from '../contexts/BudgetContext'
 
-export default function AppNav({ name, setName, setBudgets, setExpenses, setIsLoged }) {
+export default function AppNav() {
+  const { name, setName, setBudgets, setExpenses, setIsLoged } = useBudget()
   const navigate = useNavigate()
 
   function handleDeleteUser() {
@@ -35,7 +37,7 @@ export default function AppNav({ name, setName, setBudgets, setExpenses, setIsLo
         onClick={handleDeleteUser}>
         Delete Account
         <span className={styles.iconDelete}>
-          <FontAwesomeIcon icon={faTrashCan} style={{ color: "#ffffff", }} />        </span>
+          <FontAwesomeIcon icon={faTrashCan} style={{ color: "#ffffff", }} />  </span>
       </button>
     </nav>
   )

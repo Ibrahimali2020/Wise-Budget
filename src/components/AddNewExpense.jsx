@@ -5,16 +5,17 @@ import Button from './Button'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { toast } from 'react-toastify'
 import { useLocation } from 'react-router-dom'
+import { useBudget } from '../contexts/BudgetContext'
 
-export default function AddNewExpense({
-  budgets,
-  expenseName,
-  expenseAmount,
-  setExpenseName,
-  setExpenseAmount,
-  selectbudgetCategory,
-  setSelectBudgetCategory,
-  handleAddNewExpense }) {
+export default function AddNewExpense({ budgets }) {
+  const {
+    handleAddNewExpense,
+    expenseName,
+    setExpenseName,
+    expenseAmount,
+    setExpenseAmount,
+    selectbudgetCategory,
+    setSelectBudgetCategory } = useBudget()
 
   const location = useLocation();
   const { budgetName, budgetId } = budgets[0]

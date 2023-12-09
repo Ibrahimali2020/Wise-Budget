@@ -3,9 +3,11 @@ import styles from './Hero.module.css';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Button from './Button';
+import { useBudget } from '../contexts/BudgetContext';
 
-export default function Hero({ name, setName, isLoged, setIsLoged }) {
+export default function Hero() {
   const navigate = useNavigate()
+  const { name, setName, setIsLoged } = useBudget()
 
   function handleCreateAccount() {
     if (!name) return;

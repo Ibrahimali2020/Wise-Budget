@@ -4,12 +4,10 @@ import { ProgressBar } from 'react-bootstrap'
 import Button from './Button'
 import { faEye, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { Link, useLocation } from 'react-router-dom'
+import { useBudget } from '../contexts/BudgetContext'
 
-export default function BudgetCategory({
-  budget,
-  expenses,
-  handleDeleteBudget }) {
-
+export default function BudgetCategory({ budget }) {
+  const { expenses, handleDeleteBudget } = useBudget()
 
   const location = useLocation();
   const filteredExpenses = expenses.filter(expense => expense.selectbudgetCategory === budget.budgetId)

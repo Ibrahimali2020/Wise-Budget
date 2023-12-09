@@ -3,8 +3,10 @@ import Button from './Button'
 import { faDollar } from '@fortawesome/free-solid-svg-icons'
 import Card from './Card'
 import { toast } from 'react-toastify'
+import { useBudget } from '../contexts/BudgetContext'
 
-export default function CreateBudget({ budgetName, setBudgetName, budgetAmount, setBudgetAmount, handleCreateBudget }) {
+export default function CreateBudget() {
+  const { budgetName, setBudgetName, budgetAmount, setBudgetAmount, handleCreateBudget } = useBudget()
 
   function handleSubmit(e) {
     e.preventDefault()

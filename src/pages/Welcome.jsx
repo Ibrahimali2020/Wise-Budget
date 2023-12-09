@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import Hero from '../components/Hero'
 import { useNavigate } from 'react-router-dom'
+import { useBudget } from '../contexts/BudgetContext'
 
 
-export default function Welcome({ name, setName, isLoged, setIsLoged }) {
+export default function Welcome() {
+  const { isLoged } = useBudget()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -21,11 +23,7 @@ export default function Welcome({ name, setName, isLoged, setIsLoged }) {
 
   return (
     <>
-      <Hero
-        name={name}
-        setName={setName}
-        isLoged={isLoged}
-        setIsLoged={setIsLoged} />
+      <Hero />
     </>
   )
 }

@@ -2,25 +2,12 @@ import React from 'react'
 import AppNav from '../components/AppNav'
 import { Outlet } from 'react-router-dom'
 
-export default function HomePage({
-  name,
-  setName,
-  setBudgets,
-  setExpenses,
-  setIsLoged,
-}) {
+export default function HomePage() {
   return (
     <>
-      <AppNav
-        name={name}
-        setName={setName}
-        setBudgets={setBudgets}
-        setExpenses={setExpenses}
-        setIsLoged={setIsLoged} />
+      <AppNav />
 
       <Outlet />
-
-
     </>
   )
 }

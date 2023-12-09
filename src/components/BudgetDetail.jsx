@@ -4,20 +4,12 @@ import BudgetCategory from './BudgetCategory'
 import AddNewExpense from './AddNewExpense'
 import RecentExpensesTable from './RecentExpensesTable'
 import { useNavigate, useParams } from 'react-router-dom'
+import { useBudget } from '../contexts/BudgetContext'
 
-export default function BudgetDetail({
-  budgets,
-  expenseName,
-  expenseAmount,
-  setExpenseName,
-  setExpenseAmount,
-  selectbudgetCategory,
-  setSelectBudgetCategory,
-  handleAddNewExpense,
-  expenses,
-  handleDeleteExpense,
-  handleDeleteBudget
-}) {
+export default function BudgetDetail() {
+  const { budgets,
+    expenses,
+  } = useBudget();
 
   const navigate = useNavigate()
   const { id } = useParams()
@@ -50,23 +42,10 @@ export default function BudgetDetail({
             key={budget.budgetId}
             budget={budget}
             budgetAmount={budgetAmount}
-            expenseName={expenseName}
-            expenseAmount={expenseAmount}
-            setExpenseName={setExpenseName}
-            setExpenseAmount={setExpenseAmount}
-            expenses={expenses}
-            handleDeleteBudget={handleDeleteBudget}
           />)}
 
         {(budgets.length > 0) && <AddNewExpense
           budgets={selectedBudget}
-          expenseName={expenseName}
-          expenseAmount={expenseAmount}
-          setExpenseName={setExpenseName}
-          setExpenseAmount={setExpenseAmount}
-          selectbudgetCategory={selectbudgetCategory}
-          setSelectBudgetCategory={setSelectBudgetCategory}
-          handleAddNewExpense={handleAddNewExpense}
         />}
       </WrapperForms>
 
@@ -77,7 +56,6 @@ export default function BudgetDetail({
           <RecentExpensesTable
             expenses={expensesfilteredbyBudgetId}
             budgets={selectedBudget}
-            handleDeleteExpense={handleDeleteExpense}
             id={id} />
         </>}
     </>
